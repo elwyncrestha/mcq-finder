@@ -4,6 +4,7 @@ import {forkJoin, Observable} from "rxjs";
 import {Question} from "./models/question.model";
 import {PlatformQuestionMapping} from "./constants/platform-question-mapping";
 import {reduce} from "rxjs/operators";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class AppService {
     const questions$ = Object
       .values(PlatformQuestionMapping)
       .reduce((p, c) => [...p, ...c], [])
-      .map((json) => this.http.get<Question[]>(json));
+      .map((json) => this.http.get<Question[]>(`${environment.url}${json}`));
     return forkJoin(questions$).pipe(
       reduce<Question[][], Question[]>((p, c, i) => {
         return [
