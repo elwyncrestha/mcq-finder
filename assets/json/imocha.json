@@ -1,0 +1,155 @@
+[
+  {
+    "question": "Many user threads map to the same kernel thread. Kernel thread processes user threads in a preemptive 5ns time sliced window. The context switching time for the kernel thread is 2ns.\nGiven that there are 2 user processes, each of which needs to be processed for 12ns. Estimate the total time of finishing both the user process?",
+    "options": [
+      "24",
+      "26",
+      "32",
+      "34"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "The update operation of a variable takes N unit of time. T threads update the variable at the same time. If data consistency is ensured, what will be the total time of above processing?",
+    "options": [
+      "N units",
+      "N * T units",
+      "T units",
+      "N * T / 2 units"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "An array is split into 10 ranges and processed by 10 different threads. The sum of all array element have to be calculated. The following 2 approaches are followed: i) A global variable is used to store the final sum. Each thread adds each value, in its respective range, one by one to the global sum variable. ii) A global variable is used to store the final sum. Each thread evaluates the sum locally and finally adds it to the global sun variable. Compare the time complexity of the above 2 approaches.",
+    "options": [
+      "1 > 2",
+      "2 > 1",
+      "1 = 2",
+      "It cannot be determined"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "What is synchronization in reference to a thread?",
+    "options": [
+      "It’s a process of handling situations when two or more threads need access to a shared resource",
+      "It’s a process by which many threads are able to access the same shared resource simultaneously",
+      "It’s a process by which a method is able to access many different threads simultaneously",
+      "It’s a method that allows too many threads to access any information they require"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Which method is called when a thread is blocked from running temporarily?",
+    "options": [
+      "a) Pulse()",
+      "b) PulseAll()",
+      "c) Wait()",
+      "Both b & c"
+    ],
+    "answers": [
+      2
+    ]
+  },
+  {
+    "question": "What kind of exception is being thrown if Wait(), Pulse() or PulseAll() is called from code that is not within synchronized code?",
+    "options": [
+      "System I/O Exception",
+      "DivideByZero Exception",
+      "SynchronizationLockException",
+      "All of the mentioned"
+    ],
+    "answers": [
+      2
+    ]
+  },
+  {
+    "question": "What is mutex?",
+    "options": [
+      "a mutually exclusive synchronization object",
+      "can be acquired by more than one thread at a time",
+      "helps in sharing of resource which can be used by one thread",
+      "All of the mentioned"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "What is Semaphore?",
+    "options": [
+      "Grant more than one thread access to a shared resource at the same time",
+      "Useful when a collection of resources is being synchronized",
+      "Make use of a counter to control access to a shared resource"
+    ],
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "question": "Which method is used to abort thread prior to it’s normal execution?",
+    "options": [
+      "sleep()",
+      "terminate()",
+      "suspend()",
+      "Abort()"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "Which of these statements is incorrect?",
+    "options": [
+      "By multithreading CPU idle time is minimized, and we can take maximum use of it",
+      "By multitasking CPU idle time is minimized, and we can take maximum use of it",
+      "Two thread in Csharp can have same priority",
+      "A thread can exist only in two states, running and blocked"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "What is multithreaded programming?",
+    "options": [
+      "It’s a process in which two different processes run simultaneously",
+      "It’s a process in which two or more parts of same process run simultaneously",
+      "It’s a process in which many different process are able to access same information",
+      "It’s a process in which a single process can access information from many sources"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the following statements can provide the output \"11280\"?",
+    "options": [
+      "String str = \"PS11280\" System.out.println(str.substring(2, 4))",
+      "String str = \"ZS112180\" System.out.println(str.substring(3, 5))",
+      "String str = \"P\"; String strJ = \"J\"; String strK = \"2\"; System.out.println(str.length() + strJ.length() + strK + \"80\");",
+      "String str = \"P\"; String strJ = \"J\"; String strK = \"2\"; System.out.println(str.length() + strJ.length() + \"280\");"
+    ],
+    "answers": []
+  },
+  {
+    "question": "_______ is required for socket to wait for connection.",
+    "options": [
+      "server.wait()",
+      "server.accept()",
+      "server.wait(1000)",
+      "server.join()"
+    ],
+    "answers": []
+  }
+]
