@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-ci": "ng build --prod --output-path public --base-href=/mcq-finder/",
+    "deploy": "ng deploy --base-href=/mcq-finder/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
