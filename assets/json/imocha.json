@@ -80,7 +80,8 @@
       "All of the mentioned"
     ],
     "answers": [
-      0
+      0,
+      2
     ]
   },
   {
@@ -156,7 +157,7 @@
     "question": "You are implementing an operation on a processor. You need to ensure whether the operation is atomic or not. Which of the following methods will ensure its atomicity?",
     "options": [
       "One needs to ensure that if it is a single core processor, then the number of CPU instructions take to execute the operation is exactly equal to 1",
-      "If there is a multicore system, there is a need to device a method which ensure that there is a LOCK asserted on the bus that will prevent the simultaneous access of memory by any other processor apart from using a spinlock.",
+      "[Temp: False] If there is a multicore system, there is a need to device a method which ensure that there is a LOCK asserted on the bus that will prevent the simultaneous access of memory by any other processor apart from using a spinlock.",
       "If there is a multicore system, then there is a need to ensure that the operation takes exactly 1 CPU instruction to execute the operation while the interrupts are disabled.",
       "If the processor is single core, then disabling interrupts for some time can efficiently assure the whether the operation is atomic."
     ],
@@ -233,6 +234,31 @@
     ],
     "answers": [
       0
+    ]
+  },
+  {
+    "question": "Which property in Stream implementation uses the default Fork/Join pool and allows to configure it's target concurrency?",
+    "options": [
+      "parallelism",
+      "fork",
+      "serializable",
+      "parallel",
+      "None of the mentioned"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "What happens when SwingWorker task is not finished?",
+    "options": [
+      "It will invoke join method of Thread Class",
+      "It will throw ConcurrentTaskException",
+      "It will throw TimeoutException",
+      "None of the mentioned"
+    ],
+    "answers": [
+      2
     ]
   }
 ]
