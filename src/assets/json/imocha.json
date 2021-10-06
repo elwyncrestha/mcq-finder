@@ -151,5 +151,88 @@
       "server.join()"
     ],
     "answers": []
+  },
+  {
+    "question": "You are implementing an operation on a processor. You need to ensure whether the operation is atomic or not. Which of the following methods will ensure its atomicity?",
+    "options": [
+      "One needs to ensure that if it is a single core processor, then the number of CPU instructions take to execute the operation is exactly equal to 1",
+      "If there is a multicore system, there is a need to device a method which ensure that there is a LOCK asserted on the bus that will prevent the simultaneous access of memory by any other processor apart from using a spinlock.",
+      "If there is a multicore system, then there is a need to ensure that the operation takes exactly 1 CPU instruction to execute the operation while the interrupts are disabled.",
+      "If the processor is single core, then disabling interrupts for some time can efficiently assure the whether the operation is atomic."
+    ],
+    "answers": []
+  },
+  {
+    "question": "You want to implement a semaphore as a guard to a set of resources like database connections or dana pool. Which class would you used in Java to achieve this?",
+    "options": [
+      "java.util.concurrent.Executor",
+      "java.util.concurrent.ExecutorService",
+      "java.util.concurrent.Locks",
+      "java.util.concurrent.Semaphore"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "You've implemented a synchronized method. Now you figure out that you will have to access this method with one more thread. To solve this problem you are trying to debug it. In your debugger window, you can see that one thread just accessed this method and it is not accessible anymore. When will this method be available again from the memory perspective for you to handle another thread?",
+    "options": [
+      "When running thread returns key of lock object on that method.",
+      "When the new key will be generated in the memory.",
+      "This method will never accessible by another thread.",
+      "You have to re-run your application until other thread is lucky enough to get this job first."
+    ],
+    "answers": [
+      2
+    ]
+  },
+  {
+    "question": "Choose the statements which differs the thread based multitasking and process based multitasking from each other.",
+    "options": [
+      "Process-based multitasking handles the concurrent execution of programs",
+      "Process-based multitasking handles the concurrent execution of pieces of the same program",
+      "Thread-based multitasking handles the concurrent execution of programs",
+      "Thread-based multitasking deals with the concurrent execution of pieces of the same program"
+    ],
+    "answers": [
+      0,
+      3
+    ]
+  },
+  {
+    "question": "Which class from Collection increments or decrements its size and provides access by index to its elements and its methods are not synchronized ?",
+    "options": [
+      "java.util.ArrayList",
+      "java.util.List",
+      "java.util.HashSet",
+      "java.util.Vector"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "_______ injects resources for topic in JMS.",
+    "options": [
+      "@Resource(lookup = \"jms/ConnectionFactory\")",
+      "@Resource(lookup = \"jms/Connection\")",
+      "@Resource(lookup = \"jms/JmsConnectionFactor\")",
+      "@Resource(lookup = \"jms/DataConnectionFactory\")"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "The <PARAM> tag contains two attributes namely _____ and _____",
+    "options": [
+      "Name, Value",
+      "Id, Value",
+      "Param, Name",
+      "None of the mentioned"
+    ],
+    "answers": [
+      0
+    ]
   }
 ]
