@@ -1,0 +1,89 @@
+[
+  {
+    "question": "What is the best practice to protect the API in spring boot",
+    "options": [
+      "use authentication with SSL",
+      "use token service and invoke token api and send the token to api for validation",
+      "use DB authentication for the client who is invoking the API",
+      "None"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "How to externalize the properties in Spring boot?",
+    "description": "@RequestMapping(value = \"/login\", method = RequestMethod.POST)\npublic String login(----------) {\n    UserInfo user = // how to read as a json object from the paramters?\n    User user = // from which object User Authorities can be retrieved?\n}",
+    "options": [
+      "@RequestBody String user & Principal",
+      "@RequestBody User user & Principal",
+      "@RequestParam String user & Authentication",
+      "@RequestParam User user & Authentication"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Difference between spring jar & war components",
+    "options": [
+      "both are same and deployment style are same",
+      "spring boot only generates jar not the war",
+      "both will have the BOOT-INF directory and the libs in it",
+      "jar contains the BOOT-INF directory and the libs in it and war contains WEB-INF directory and the libs in it"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "What is the output of the below program?",
+    "description": "public class Test {\n  public static boolean outPut(Integer a) {\n    return Integer.toString(a).equals(new StringBuilder(Integer.toString(a)).reverse().toString());\n  }\n  public static void main(String[] args) throws Exception {\n    System.out.println(outPut(2));\n  }\n}",
+    "options": [
+      "true",
+      "false",
+      "compile time error",
+      "run time error"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Identify the best way to solve the below performance issue?",
+    "description": "There are millions of records exists in the DB, and users are frequently accessing the data from the Web App (UI). What is the best possible solution to achieve high performance of the data?",
+    "options": [
+      "Implement the caching on the frequently used data",
+      "Implement the parallel threads to load the data from DB",
+      "Increase the BE containers based on the load of the user requests",
+      "All the above"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "Identify the query which could lead to the SQL injection issue?",
+    "options": [
+      "String sqlQuery = \"SELECT DEPARTMENT, count(WORKER_ID) FROM worker where WORKER_NAME = 'John';",
+      "String sqlQuery = \"SELECT DEPARTMENT, count(WORKER_ID) FROM worker where WORKER_NAME = ?;",
+      "String sqlQuery = \"SELECT DEPARTMENT, count(WORKER_ID) FROM worker where WORKER_NAME = '\" + name + \"'",
+      "None of the above"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "How to print the below mentioned x value?",
+    "options": [
+      "print.run(\"java\");",
+      "print.accept(\"java\");",
+      "print.toString();",
+      "System.out.println(print.toString())"
+    ],
+    "answers": [
+      1
+    ]
+  }
+]
