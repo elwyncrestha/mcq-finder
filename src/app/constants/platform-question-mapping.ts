@@ -4,5 +4,5 @@ export const PlatformQuestionMapping: {[k: string]: string[]} = {
   ],
   'HackerRank': [
     '/assets/json/hackerrank.json'
-  ]
+  ],
 }

@@ -3,6 +3,7 @@
     <div class="container-fluid">
       <span class="navbar-brand mb-0 h1">MCQ Answers</span>
       <form class="d-flex">
+        <button (click)="toggleFilter = !toggleFilter" class="btn btn-outline-primary mx-2" type="button">Filter</button>
         <input
           [ngModel]="search"
           (ngModelChange)="debounceSearchChange($event)"
@@ -11,6 +12,24 @@
       </form>
     </div>
   </nav>
+  <div *ngIf="toggleFilter" class="container-fluid p-3">
+    <div class="h-100 p-5 text-white bg-dark rounded-3">
+      <div class="d-flex">
+        <div>
+          <h2>Choose platforms</h2>
+        </div>
+        <div class="ml-auto">
+          <button (click)="setAll(true)" class="btn btn-sm btn-outline-light mx-1" type="button">Select All</button>
+          <button (click)="setAll(false)" class="btn btn-sm btn-outline-light" type="button">Deselect All</button>
+        </div>
+      </div>
+      <br />
+      <div *ngFor="let opt of filterOptions" class="form-check form-check-inline">
+        <input #chkBox (change)="setOne(opt, chkBox.checked)" class="form-check-input" type="checkbox" [id]="opt" [checked]="filterOptionsState[opt]">
+        <label class="form-check-label" [for]="opt">{{ opt }}</label>
+      </div>
+    </div>
+  </div>
   <div class="p-3">
     <div *ngFor="let question of questions$ | filterObs: 'question': search | async" class="card m-1">
       <div class="card-header">{{ question?.question }}</div>
