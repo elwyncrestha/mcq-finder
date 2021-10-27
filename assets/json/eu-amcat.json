@@ -1,0 +1,459 @@
+[
+  {
+    "question": "When clustering servlets, you should...",
+    "options": [
+      "A) ...avoid storing values in ServletContext",
+      "B) ...make sure objects stored in session are serializable.",
+      "C) ...avoid using the java.io package.",
+      "D) A and B",
+      "E) All of the above"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Which of the following actions happens entirely on the server?",
+    "options": [
+      "Forward",
+      "Redirect",
+      "Slide",
+      "Return"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "The code snippet below is used while doing which of the following?",
+    "description": "enctype=\"multipart/form-data\"",
+    "options": [
+      "getting a large amount of data",
+      "posting a large amount of data",
+      "when a form contains a file upload",
+      "while sending a large amount of data"
+    ],
+    "answers": [
+      2
+    ]
+  },
+  {
+    "question": "A servlet is thread safe by default.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "JSP and servlets CANNOT be deployed in which of the following servers?",
+    "options": [
+      "Tomcat Server",
+      "Apache HTTP Server",
+      "JBOSS Server",
+      "All of the above"
+    ],
+    "answers": []
+  },
+  {
+    "question": "Which of the following indicates the appropriate number of ServletContext instances for the given situation?",
+    "options": [
+      "one per application",
+      "two per request",
+      "one per servlet",
+      "two per servlet"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "When the doGet() method is used, which of the following indicates the maximum amount of data that can be passed from the UI?",
+    "options": [
+      "The maximum amount is 1K.",
+      "The maximum amount is 2K.",
+      "The maximum amount is configurable.",
+      "There is no limit to the maximum amount."
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the following JSP lifecycle methods CANNOT be overridden?",
+    "options": [
+      "jspInit()",
+      "_jspService()",
+      "jspDestroy()",
+      "All of the above"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the following is NOT a valid event listener?",
+    "options": [
+      "javax.servlet.ServletContextListener",
+      "javax.servlet.ServletConfigListener",
+      "javax.servlet.ServletRequestListener",
+      "javax.servlet.ServletRequestAttributeListener"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the following will hide comments in generated code?",
+    "options": [
+      "<%- comment -%>",
+      "<!- comment -->",
+      "<% comment %>",
+      "/* comment */"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "A servlet filter can perform which of the following?",
+    "options": [
+      "request authentication",
+      "logging",
+      "data compression",
+      "All of the above"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "Which of the following FacesContext methods skips the Render Response phase in JSF?",
+    "options": [
+      "renderResponse",
+      "responseComplete",
+      "validationFailed",
+      "The Render Response phase cannot be skipped."
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "To inject a JNDI resource, which of the following mechanisms should be used?",
+    "options": [
+      "Dependency Injection",
+      "Resource Injection",
+      "Constructor Injection",
+      "Interface Injection"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the following is NOT a valid JMS message type?",
+    "options": [
+      "StreamMessage",
+      "MapMessage",
+      "JSONMessage",
+      "BytesMessage",
+      "XMLMessage"
+    ],
+    "answers": [
+      4
+    ]
+  },
+  {
+    "question": "Which of the following is a component of the Publish and Subscribe model in JMS?",
+    "options": [
+      "Queue",
+      "Topic",
+      "Backlog",
+      "Hump"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "In JMS 2.0, multiple consumers are allowed on the same topic subscription.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "In JMS 2.0, which of the following annotation on JMSContext makes the container assume responsibility of the lifecycle?",
+    "options": [
+      "@Inject",
+      "@Auto",
+      "@ContainerManaged",
+      "@Scribe"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Which of the following attribute values passed in createContext may result in duplicate acknowledgements in JMS?",
+    "options": [
+      "A) JMSContext.AUTO_ACKNOWLEDGE",
+      "B) JMSContext.CLIENT_ACKNOWLEDGE",
+      "C) JMSContext.DUPS_OK_ACKNOWLEDGE",
+      "D) A and C",
+      "E) All of the above"
+    ],
+    "answers": [
+      2
+    ]
+  },
+  {
+    "question": "A JMS provider guarantees delivery of higher-priority messages before lower-priority ones.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Which of the following is a valid JDBC cursor type?",
+    "options": [
+      "A) TYPE_FORWARD_ONLY",
+      "B) TYPE_SCROLL_SENSITIVE",
+      "C) TYPE_SCROLL_INSENSITIVE",
+      "D) A and C",
+      "E) All of the above"
+    ],
+    "answers": [
+      4
+    ]
+  },
+  {
+    "question": "Which of the following transaction isolation levels prevents a phantom read?",
+    "options": [
+      "TRANSACTION_READ_COMMITTED",
+      "TRANSACTION_READ_UNCOMMITTED",
+      "TRANSACTION_REPEATABLE_READ",
+      "TRANSACTION_SERIALIZABLE"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "Which of the following statements about the code below is TRUE?",
+    "description": "preparedStatement.setNull(5, java.sql.Types.INTEGER)",
+    "options": [
+      "It is not a valid statement and will not compile",
+      "It will throw an exception at runtime.",
+      "It binds the null variable to a parameter.",
+      "It will incrementally loop the code below it in sets of 5."
+    ],
+    "answers": [
+      2
+    ]
+  },
+  {
+    "question": "Which of the following beans is associated with the persistence layer?",
+    "options": [
+      "Entity Bean",
+      "Session Bean",
+      "Message Driven Bean",
+      "Jumping Bean"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Which of the following beans is ideal to manage the lifecycle of an application?",
+    "options": [
+      "Stateful Session Bean",
+      "Stateless Session Bean",
+      "Singleton Session Bean",
+      "Individual Session Bean"
+    ],
+    "answers": [
+      2
+    ]
+  },
+  {
+    "question": "The diagram below depicts the lifecycle of which of the following?",
+    "description": "[DOES NOT EXIST] <--> [READY] <--> [PASSIVE]",
+    "options": [
+      "Stateful Session Bean",
+      "Stateless Session Bean",
+      "Singleton Session Bean",
+      "Entity Bean",
+      "Message Driven Bean"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "An EJB business method modifier must NOT be which of the following?",
+    "options": [
+      "A) static",
+      "B) final",
+      "C) public",
+      "D) A and B",
+      "E) All of the above"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "Which of the following is NOT a valid security annotation at the method level?",
+    "options": [
+      "@javax.annotation.security.DeclareRoles",
+      "@javax.annotation.security.PermitAll",
+      "@javax.annotation.security.DenyAll",
+      "@javax.annotation.security.RolesAllowed"
+    ],
+    "answers": []
+  },
+  {
+    "question": "A session bean can have many local business interfaces.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Which of the following will create an EJB that allows remote access?",
+    "options": [
+      "A) @Remote public interface InterfaceName {...}",
+      "B) @Remote(InterfaceName.class) public class BeanName implements InterfaceName {...}",
+      "C) @Remote(InterfaceName) public class InterfaceName implements BeanName {...}",
+      "D) A and B",
+      "E) All of the above"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "The Entity Class can have NO argument constructor that has which of the following access modifiers?",
+    "options": [
+      "A) private",
+      "B) public",
+      "C) protected",
+      "D) B and C",
+      "E) All of the above"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "Which of the following Web services CANNOT maintain a server state?",
+    "options": [
+      "A) SOAP Based",
+      "B) RESTful",
+      "C) WSDL",
+      "D) A and C",
+      "E) All of the above"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the following statements concerning JAX-WS business methods is TRUE?",
+    "options": [
+      "The business can be static.",
+      "The business must be public.",
+      "The business can be final",
+      "All of the above"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "A JAX-WS endpoint implementing class can be annotated with which of the following?",
+    "options": [
+      "javax.jws.WebService",
+      "javax.jws.WebServiceProvider",
+      "javax.jws.WebParam.mode",
+      "A and B",
+      "All of the above"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "A JAX-WS endpoint implementing class can define the finalize() method.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the following HTTP methods is supported in the RESTful Web service?",
+    "options": [
+      "GET",
+      "OPTIONS",
+      "HEAD",
+      "B and C",
+      "All of the above"
+    ],
+    "answers": [
+      4
+    ]
+  },
+  {
+    "question": "Based on the code snippet below, which of the following will be the result?",
+    "description": "@Path('/myService')\n@Produces('text/xml')\npublic class MyService{\n@GET\n@Produces('application/json')\npublic String myMethod() {...}\n}\n}",
+    "options": [
+      "An HTTP Error 406 Not Acceptable error will be thrown.",
+      "The code simply will not compile.",
+      "The MIME defined at the method level will override the class level definition.",
+      "The MIME defined at the class level will override the method level definition."
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "The HTTP 415 Unsupported Media Type error is thrown when...",
+    "options": [
+      "...a resource is unable to consume the MIME type of a client request.",
+      "...a method is unable to produce the MIME type of a client request.",
+      "...a server cannot meet the requirements of the MIME type request-header field.",
+      "...the request goes to a server that cannot produce a response."
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "If a ConstraintValidationException is thrown while validating a method return type, the JAX-RS runtime will respond to the client with which of the following HTTP status code error?",
+    "options": [
+      "500 (Internal Server Error)",
+      "400 (Bad Request)",
+      "406 (Not Acceptable)",
+      "417 (Exception Failed)"
+    ],
+    "answers": [
+      0
+    ]
+  }
+]
