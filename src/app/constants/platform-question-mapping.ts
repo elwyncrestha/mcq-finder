@@ -5,4 +5,7 @@ export const PlatformQuestionMapping: {[k: string]: string[]} = {
   'HackerRank': [
     '/assets/json/hackerrank.json'
   ],
+  'amcat': [
+    '/assets/json/eu-amcat.json'
+  ]
 }
