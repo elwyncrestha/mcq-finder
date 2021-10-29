@@ -41,7 +41,13 @@
           <li *ngFor="let opt of question?.options; let i = index;">
             <div
               class="badge"
-              [ngClass]="(question?.answers | arrayIncludes: i) ? ['bg-success', 'text-light'] : ['bg-light', 'text-dark']">
+              [ngClass]="{
+                'bg-success': (question?.answers | arrayIncludes: i),
+                'text-light': (question?.answers | arrayIncludes: i),
+                'bg-danger': (question?.answers | arrayIncludes: ((i + 1) * -1)),
+                'bg-light': (question?.answers | arrayIncludes: ((i + 1) * -1)) === false && (question?.answers | arrayIncludes: i) === false,
+                'text-dark': (question?.answers | arrayIncludes: i) === false
+              }">
               {{ opt }}
             </div>
           </li>
