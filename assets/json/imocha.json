@@ -151,7 +151,9 @@
       "server.wait(1000)",
       "server.join()"
     ],
-    "answers": []
+    "answers": [
+      -1
+    ]
   },
   {
     "question": "You are implementing an operation on a processor. You need to ensure whether the operation is atomic or not. Which of the following methods will ensure its atomicity?",
@@ -260,5 +262,91 @@
     "answers": [
       2
     ]
+  },
+  {
+    "question": "In a multithreading model, all process are blocked due to a blocking system call. Infer the type of model from the above scenario.",
+    "options": [
+      "Many-to-One",
+      "One-to-One",
+      "Both Choice 1 & 2",
+      "Neither Choice 1 nor 2"
+    ],
+    "answers": []
+  },
+  {
+    "question": "The client has requested that three methods of an instance must be used simultaneously to get better code performance. When a synchronized keyword is added to add the three methods, only one will be executed because it will take the key first. How to solve this problem?",
+    "options": [
+      "By calling synchronization.multiple() method on 2nd and 3rd methods.",
+      "By creating a custom key object that will dictate the behavior of synchronization instead of using an implicit lock object.",
+      "This is not achievable.",
+      "Code should be refactored in the way that every method is in a separate class."
+    ],
+    "answers": []
+  },
+  {
+    "question": "In java multi-threading, if you don't want to create a new thread and execute the code on the same calling thread, then which method should be called?",
+    "options": [
+      "Run()",
+      "Start()",
+      "Create()",
+      "Both Choice 1 and Choice 2",
+      "Both Choice 2 and Choice 3"
+    ],
+    "answers": []
+  },
+  {
+    "question": "If a user inputs \"US 960\", what should be the output based on the below code?",
+    "description": "Scanner scanner = new Scanner();\nString strNew;\nstrNew = scanner.next();\nSystem.out.print(strNew);",
+    "options": [
+      "US960",
+      "US",
+      "US 960",
+      "The above code does not compile."
+    ],
+    "answers": [3]
+  },
+  {
+    "question": "What will be the output of below code snippet?",
+    "description": "AtomicInteger atomicInteger = new AtomicInteger();\nSystem.out.println(atomicInteger);\natomicInteger.set(10);\nSystem.out.println(atomicInteger.getAndSet(22));\nSystem.out.println(atomicInteger.get());",
+    "options": [
+      "1,10,22",
+      "0,10,22",
+      "10,22",
+      "NullPointerException at Line 2",
+      "None of the mentioned"
+    ],
+    "answers": [1]
+  },
+  {
+    "question": "What will be the output of below code?",
+    "description": "ArrayList myList = new ArrayList(5);\nint sum = 0;\nfor (int peg = 0; peg < 20; ++peg)\n  myList.add(peg, new Integer(peg));\nfor (int myPatch = 0; myPatch < 20; myPatch += 2)\n  sum += ((Integer) myList.get(myPatch)).intValue();\nSystem.out.println(sum);",
+    "options": [
+      "90",
+      "210",
+      "Runtime Exception",
+      "Compilation Error"
+    ],
+    "answers": [0]
+  },
+  {
+    "question": "A n * m matrix data is processed in a batch window of 2 * 2 and the sum of output of all batches is calculated. If instead of a using a single thread, the processing is parallelised using 4 threads, how much faster the entire program execute? Let processing time be: X, for single thread, Y, for 4 threads",
+    "options": [
+      "X = 4 * Y",
+      "X > 4 * Y",
+      "X < 4 * Y",
+      "X = Y"
+    ],
+    "answers": []
+  },
+  {
+    "question": "Given is a code snippet. This code snippet is expected to give a concurrency problem although it looks like a trivial synchornization example. Given are two statements that may ideally be the Reason and Solution or Workaround to this issue. Read the statements and mark the appropriate option. R: Strings are interned in JAVA. Hence, the literal string \"LOCK\" turns out to be the same instance of java.lang.String even though they are declared completely disparately from each other. S: private static final Object LOCK = new Object();",
+    "description": "private static final String LOCK = \"LOCK\";\npublic dummy_module()\n{\n  synchronized(LOCK)\n  {\n    this.work();\n  }\n}",
+    "options": [
+      "R is the correct reason and S is a correct Workaround",
+      "R is the correct reason and S is not a correct Workaround",
+      "R is the incorrect reason and S is the correct Workaround",
+      "R is the incorrect reason and S is the incorrect Workaround"
+    ],
+    "answers": []
   }
 ]
