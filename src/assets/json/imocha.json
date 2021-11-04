@@ -303,7 +303,9 @@
       "US 960",
       "The above code does not compile."
     ],
-    "answers": [3]
+    "answers": [
+      3
+    ]
   },
   {
     "question": "What will be the output of below code snippet?",
@@ -315,7 +317,9 @@
       "NullPointerException at Line 2",
       "None of the mentioned"
     ],
-    "answers": [1]
+    "answers": [
+      1
+    ]
   },
   {
     "question": "What will be the output of below code?",
@@ -326,7 +330,9 @@
       "Runtime Exception",
       "Compilation Error"
     ],
-    "answers": [0]
+    "answers": [
+      0
+    ]
   },
   {
     "question": "A n * m matrix data is processed in a batch window of 2 * 2 and the sum of output of all batches is calculated. If instead of a using a single thread, the processing is parallelised using 4 threads, how much faster the entire program execute? Let processing time be: X, for single thread, Y, for 4 threads",
@@ -346,6 +352,52 @@
       "R is the correct reason and S is not a correct Workaround",
       "R is the incorrect reason and S is the correct Workaround",
       "R is the incorrect reason and S is the incorrect Workaround"
+    ],
+    "answers": []
+  },
+  {
+    "question": "I have group of employees. First I want to group them by the Employee ID. Then I want to further group those sets into same name employees together, which of the following code snippets will work fine?",
+    "options": [
+      "Map<Integer, List<String>> grouping = employees.stream().collect(Collectors.groupingBy(Employee::getEmployeeId, Collectors.mapping(Employee::getName, Collectors.toList())));",
+      "Map<Integer, List<Employee>> m = employees.stream().collect(Collectors.groupingBy(Employee::getEmployeeId));",
+      "Map<Integer, List<Employee>> m = employees.stream().collect(Collectors.groupingBy(Employee::getEmployeeId)).orderBy(Employee::getName);",
+      "None of the mentioned"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "How many threads can exist for each of the processes that occur in the program?",
+    "options": [
+      "atmost 1",
+      "atleast 1",
+      "only 1"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "You are working on the new project that was already in development process by another developers. Which method is implemented in the following code?",
+    "description": "Runnable runnable = () -> {}",
+    "options": [
+      "run()",
+      "start()",
+      "execute()",
+      "runnable()"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "In which of the following system does the threads not share state, no concurrent data structures can be used and data processing stays within the same thread?",
+    "options": [
+      "a same-threaded system",
+      "a multi-threaded system",
+      "a singel threaded system",
+      "All of the mentioned"
     ],
     "answers": []
   }
