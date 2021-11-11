@@ -320,7 +320,9 @@
       "@javax.annotation.security.DenyAll",
       "@javax.annotation.security.RolesAllowed"
     ],
-    "answers": []
+    "answers": [
+      0
+    ]
   },
   {
     "question": "A session bean can have many local business interfaces.",
@@ -454,6 +456,19 @@
     ],
     "answers": [
       0
+    ]
+  },
+  {
+    "question": "Which of the following will declare the PostConstruct method?",
+    "options": [
+      "A) public @PostConstruct void methodName() {}",
+      "B) static @PostConstruct void methodName() {}",
+      "C) private @PostConstruct void methodName() {}",
+      "D) A and C",
+      "E) All of the above"
+    ],
+    "answers": [
+      3
     ]
   }
 ]
