@@ -248,7 +248,7 @@
       "None of the mentioned"
     ],
     "answers": [
-      3
+      -4
     ]
   },
   {
@@ -345,7 +345,7 @@
     "answers": []
   },
   {
-    "question": "Given is a code snippet. This code snippet is expected to give a concurrency problem although it looks like a trivial synchornization example. Given are two statements that may ideally be the Reason and Solution or Workaround to this issue. Read the statements and mark the appropriate option. R: Strings are interned in JAVA. Hence, the literal string \"LOCK\" turns out to be the same instance of java.lang.String even though they are declared completely disparately from each other. S: private static final Object LOCK = new Object();",
+    "question": "Given is a code snippet. This code snippet is expected to give a concurrency problem although it looks like a trivial synchronization example. Given are two statements that may ideally be the Reason and Solution or Workaround to this issue. Read the statements and mark the appropriate option. R: Strings are interned in JAVA. Hence, the literal string \"LOCK\" turns out to be the same instance of java.lang.String even though they are declared completely disparately from each other. S: private static final Object LOCK = new Object();",
     "description": "private static final String LOCK = \"LOCK\";\npublic dummy_module()\n{\n  synchronized(LOCK)\n  {\n    this.work();\n  }\n}",
     "options": [
       "R is the correct reason and S is a correct Workaround",
@@ -353,7 +353,7 @@
       "R is the incorrect reason and S is the correct Workaround",
       "R is the incorrect reason and S is the incorrect Workaround"
     ],
-    "answers": []
+    "answers": [1]
   },
   {
     "question": "I have group of employees. First I want to group them by the Employee ID. Then I want to further group those sets into same name employees together, which of the following code snippets will work fine?",
@@ -375,7 +375,8 @@
       "only 1"
     ],
     "answers": [
-      1
+      -2,
+      -3
     ]
   },
   {
@@ -400,5 +401,68 @@
       "All of the mentioned"
     ],
     "answers": []
+  },
+  {
+    "question": "Analyze the given code and select the correct output in which MyThreads extends thread.",
+    "description": "public class MyThread extends Thread\n{\n  public static void main(String[] args)\n  {\n    MyThread demo = new MyThread();\n    demoo.start();\n    System.out.print(\"First \");\n    demo.start();\n    System.out.print(\"Second \");\n  }\n  public void run()\n  {\n    System.out.print(\"Thread\");\n  }\n}",
+    "options": [
+      "Thread Second Thread First",
+      "It will print \"First Thread\" and throw java.lang.IllegalThreadStateException",
+      "Thread First Thread Second",
+      "Cannot be determined"
+    ],
+    "answers": [1]
+  },
+  {
+    "question": "You are introducing the idea of concurrency to the client that would significantly improve his application performance. He would like to investigate it himself before you start implementing it. You mentioned the \"happens before link\" term, which he cannot find inside the Java documentation. Where should he look for it?",
+    "options": [
+      "It is Java Memory Model so it is part of the Java Language Specification",
+      "He should look for it on forums available on Google.",
+      "There is no available online information on it.",
+      "It must be explained in the Java Documentation, he probably missed it."
+    ],
+    "answers": [-1]
+  },
+  {
+    "question": "Given are two statements S1 and S2. Read the two statements and mark the appropriate option.",
+    "description": "S1: SimpleDateFormat class is not thread-safe\nS2: SimpleDateFormat stores intermediate results in instance fields",
+    "options": [
+      "S1 is correct. S2 is correct. S2 is the correct explanation of S1.",
+      "S1 is correct. S2 is correct. S2 is not the correct explanation of S1.",
+      "S1 is correct. S2 is incorrect.",
+      "S1 is incorrect. S2 is correct."
+    ],
+    "answers": [0]
+  },
+  {
+    "question": "A thread in a Multithreading Environment already has a non-recursive mutex associated with it. However, the thread which has already locked the mutex tries to lock the mutex again. Which of the following statements correctly depict the outcome of such an event?",
+    "options": [
+      "The thread gets locked again but a count is associated with the mutex. The thread has to be unlocked as many times as it has been locked by the mutex.",
+      "The thread enters into the waiting list for the same mutex and the waiting time doesn't end because the thread is already locked by the same mutex. This results in a deadlock.",
+      "The requesting thread is moved from the running list of processor to the waiting list of the synchronization primitive. Once the mutex is available, the thread with the highest priority according to the scheduling algorithms in the list gets locked by the mutex.",
+      "The thread calls another mutex and gets associated with it too and thereby acquires an additional resource."
+    ],
+    "answers": [-2]
+  },
+  {
+    "question": "How is grouping function evaluated for Collection?",
+    "options": [
+      "Evaluated on basis of each stream element to Build groups based on equality of results",
+      "Evaluated on basis of one stream element to Build groups based on dependency of results",
+      "Evaluated on basis of each stream element to Build groups based on combination of results",
+      "Evaluated on basis of each stream element to Build groups based on frequency of results"
+    ],
+    "answers": [0]
+  },
+  {
+    "question": "What will be the output of this program?",
+    "description": "public static void main(String[] args)\n{\n  BitSet objBitSet = new BitSet(8);\n  for (int i = 0; i < 8; i++)\n  objBitSet.set(i);\n  objBitSet.clear(4);\n  System.out.println(bitSetToInt(objBitSet));\n}\npublic static int bitSetToInt(BitSet bitSet) {\n  int bitInteger = 0;\n  for (int i = 0; i < 32; i++)\n    if (bitSet.get(i))\n      bitInteger |= (1 << i);\n  return bitInteger;\n}",
+    "options": [
+      "239",
+      "249",
+      "269",
+      "349"
+    ],
+    "answers": [0]
   }
 ]
