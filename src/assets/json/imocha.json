@@ -292,7 +292,9 @@
       "Both Choice 1 and Choice 2",
       "Both Choice 2 and Choice 3"
     ],
-    "answers": []
+    "answers": [
+      -1
+    ]
   },
   {
     "question": "If a user inputs \"US 960\", what should be the output based on the below code?",
@@ -353,7 +355,9 @@
       "R is the incorrect reason and S is the correct Workaround",
       "R is the incorrect reason and S is the incorrect Workaround"
     ],
-    "answers": [1]
+    "answers": [
+      1
+    ]
   },
   {
     "question": "I have group of employees. First I want to group them by the Employee ID. Then I want to further group those sets into same name employees together, which of the following code snippets will work fine?",
@@ -375,8 +379,8 @@
       "only 1"
     ],
     "answers": [
-      -2,
-      -3
+      0,
+      2
     ]
   },
   {
@@ -411,7 +415,9 @@
       "Thread First Thread Second",
       "Cannot be determined"
     ],
-    "answers": [1]
+    "answers": [
+      1
+    ]
   },
   {
     "question": "You are introducing the idea of concurrency to the client that would significantly improve his application performance. He would like to investigate it himself before you start implementing it. You mentioned the \"happens before link\" term, which he cannot find inside the Java documentation. Where should he look for it?",
@@ -421,7 +427,9 @@
       "There is no available online information on it.",
       "It must be explained in the Java Documentation, he probably missed it."
     ],
-    "answers": [-1]
+    "answers": [
+      -1
+    ]
   },
   {
     "question": "Given are two statements S1 and S2. Read the two statements and mark the appropriate option.",
@@ -432,7 +440,9 @@
       "S1 is correct. S2 is incorrect.",
       "S1 is incorrect. S2 is correct."
     ],
-    "answers": [0]
+    "answers": [
+      0
+    ]
   },
   {
     "question": "A thread in a Multithreading Environment already has a non-recursive mutex associated with it. However, the thread which has already locked the mutex tries to lock the mutex again. Which of the following statements correctly depict the outcome of such an event?",
@@ -442,7 +452,9 @@
       "The requesting thread is moved from the running list of processor to the waiting list of the synchronization primitive. Once the mutex is available, the thread with the highest priority according to the scheduling algorithms in the list gets locked by the mutex.",
       "The thread calls another mutex and gets associated with it too and thereby acquires an additional resource."
     ],
-    "answers": [-2]
+    "answers": [
+      -2
+    ]
   },
   {
     "question": "How is grouping function evaluated for Collection?",
@@ -452,7 +464,9 @@
       "Evaluated on basis of each stream element to Build groups based on combination of results",
       "Evaluated on basis of each stream element to Build groups based on frequency of results"
     ],
-    "answers": [0]
+    "answers": [
+      0
+    ]
   },
   {
     "question": "What will be the output of this program?",
@@ -463,6 +477,120 @@
       "269",
       "349"
     ],
-    "answers": [0]
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "What will be the output of the program?",
+    "description": "class ThreadExample\n{\n  public static void main(String[] args)\n  {\n    System.out.println(Thread.currentThread().getName());\n    for (int i = 0; i < 10; i++)\n    {\n      new Thread(\"\" + i)\n      {\n        public void run()\n        {\n          System.out.println(\"Thread: \" + getName() + \" running\");\n        }\n      }.start();\n    }\n  }\n}",
+    "options": [
+      "Compilation error: no start method",
+      "Will print in this order: 1 1 1 2 2 2 3 3 3 4 4 4 5 5 5...",
+      "Will print in this order: 1 2 3 4 5 6... 1 2 3 4 5 6...",
+      "Will print but not exactly in an order"
+    ],
+    "answers": [
+      3
+    ]
+  },
+  {
+    "question": "The following declaration is not atomic in nature because the intermediate value can be read before the assignment is complete. Which of the following methods will make the declaration of variable foo_qux atomic in nature? (The OS being used is a 32 bit OS.)",
+    "description": "double foo_qux = < value >;",
+    "options": [
+      "private volatile double foo_qux;",
+      "public synchronized void setvariable(double value) { this.foo_qux = value; }",
+      "public synchronized double getvariable() { return this.foo_qux; }",
+      "private Atomicdouble foo_qux;"
+    ],
+    "answers": []
+  },
+  {
+    "question": "What will be the output of below code snippet?",
+    "description": "URLConnection connection = openConnection(\"http://www.essenor.com\");\nconnection.connect();\nSystem.out.println(\"You are connected to internet\");",
+    "options": [
+      "Prints \"You are connected to internet\"",
+      "Compiletime Exception at Line 1",
+      "Compiletime Exception at Line 2",
+      "Code compiles fine but Throws Runtime Exception"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Which of the above options can be used to market value from below code snippet?",
+    "description": "<applet code=\"Stocks\" width=500 height=500>\n  <param name=Market value=\"NSE\">\n</applet>",
+    "options": [
+      "request.getParameter(\"Market\")",
+      "AppletStub.getParameter(\"Market\")",
+      "AppletStub.getParam(\"Market\")",
+      "request.getParamm(\"Market\")",
+      "None of the mentioned"
+    ],
+    "answers": [
+      1
+    ]
+  },
+  {
+    "question": "Select correct option to create thread pool of fixed size.",
+    "options": [
+      "newFixedThreadPool(15);",
+      "newThreadPool(15)",
+      "newThread(5)",
+      "newRunnable(15)"
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "question": "What is the advantage of multithreading programs?",
+    "options": [
+      "Enables to utilize the idle and executing time present in most programs",
+      "Enables to utilize the idle time present in most programs",
+      "Both a & b"
+    ],
+    "answers": [
+      -1
+    ]
+  },
+  {
+    "question": "You have a method that is used by many threads. What are two ways you could prevent a race condition bug that other developers might possibly create.",
+    "options": [
+      "synchronized",
+      "set thread ordering",
+      "volatile",
+      "modify thread.run to support many threads"
+    ],
+    "answers": [
+      0,
+      2
+    ]
+  },
+  {
+    "question": "How to log error when RMI Server or RMI Client fails?",
+    "options": [
+      "logLevel property",
+      "logger property",
+      "log4j property",
+      "logEntry property",
+      "None of the mentioned"
+    ],
+    "answers": [
+      -2
+    ]
+  },
+  {
+    "question": "_______ is safe to collect into a HashMap.",
+    "options": [
+      "parallelStream()",
+      "parallelHashMap()",
+      "concurrentHashMap()",
+      "None of the mentioned"
+    ],
+    "answers": [
+      -3
+    ]
   }
 ]
