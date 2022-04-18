@@ -24,7 +24,7 @@
     ]
   },
   {
-    "question": "An array is split into 10 ranges and processed by 10 different threads. The sum of all array element have to be calculated. The following 2 approaches are followed: i) A global variable is used to store the final sum. Each thread adds each value, in its respective range, one by one to the global sum variable. ii) A global variable is used to store the final sum. Each thread evaluates the sum locally and finally adds it to the global sun variable. Compare the time complexity of the above 2 approaches.",
+    "question": "An array is split into 10 ranges and processed by 10 different threads. The sum of all array element have to be calculated. The following 2 approaches are followed: i) A global variable is used to store the final sum. Each thread adds each value, in its respective range, one by one to the global sum variable. ii) A global variable is used to store the final sum. Each thread evaluates the sum locally and finally adds it to the global sum variable. Compare the time complexity of the above 2 approaches.",
     "options": [
       "1 > 2",
       "2 > 1",
@@ -32,7 +32,7 @@
       "It cannot be determined"
     ],
     "answers": [
-      -1
+      1
     ]
   },
   {
@@ -284,7 +284,9 @@
       "This is not achievable.",
       "Code should be refactored in the way that every method is in a separate class."
     ],
-    "answers": []
+    "answers": [
+      1
+    ]
   },
   {
     "question": "In java multi-threading, if you don't want to create a new thread and execute the code on the same calling thread, then which method should be called?",
@@ -657,6 +659,18 @@
     ],
     "answers": [
       3
+    ]
+  },
+  {
+    "question": "Why is remove() method not Generic in Map as well as in Collection?",
+    "options": [
+      "because you should be able to pass in any type of object to remove()",
+      "The object removed does not have to be the same type of the object that you pass in to remove()",
+      "because you should be able to pass in the only specific type of object to remove()"
+    ],
+    "answers": [
+      0,
+      1
     ]
   }
 ]
